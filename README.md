@@ -1,4 +1,4 @@
-## Differences Between Interfaces and Types in TypeScript: A Very Basic Approach
+## Differences Between Interfaces and Types in TypeScript
 
 In TypeScript, both `interface` and `type` let you define the shape of your data. They often look alike, but each has its own special powers. To keep things simple, we'll use the name `Animal` for both examples.
 
