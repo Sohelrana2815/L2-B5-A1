@@ -3,24 +3,30 @@
 
   function formatString(input: string, toUpper?: boolean): string {
     if (toUpper === undefined || toUpper === true) {
+      console.log(input.toUpperCase());
       return input.toUpperCase();
     } else {
+      console.log(input.toLowerCase());
       return input.toLowerCase();
     }
   }
+
   // 2
 
   function filterByRating(
     items: { title: string; rating: number }[]
   ): { title: string; rating: number }[] {
     const highRatingItems = items.filter((item) => item.rating >= 4);
+    console.log(highRatingItems);
     return highRatingItems;
   }
 
   // 3
 
   function concatenateArrays<T>(...arrays: T[][]): T[] {
-    return ([] as T[]).concat(...arrays);
+    const concatenatedArray = ([] as T[]).concat(...arrays);
+    console.log(concatenatedArray);
+    return concatenatedArray;
   }
 
   // 4
@@ -53,16 +59,17 @@
   }
   const myCar = new Car("Toyota", 2020, "Corolla");
 
-  // myCar.getInfo();
-  // myCar.getModel();
-
   // 5
 
   function processValue(value: string | number): number {
     if (typeof value === "string") {
-      return value.length;
+      const charactersOfValue = value.length;
+      console.log(charactersOfValue);
+      return charactersOfValue;
     } else if (typeof value === "number") {
-      return value * 2;
+      const doubleTheValue = value * 2;
+      console.log(doubleTheValue);
+      return doubleTheValue;
     } else {
       throw new Error("Invalid input type");
     }
@@ -78,17 +85,18 @@
     const mostExpensiveProduct = product.reduce((max, min) =>
       max.price > min.price ? max : min
     );
+    console.log(mostExpensiveProduct);
     return mostExpensiveProduct;
   }
 
   // 7
 
   enum Day {
-    Monday, //0
-    Tuesday, //1
-    Wednesday, //2
-    Thursday, //3
-    Friday, //4
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
     Saturday,
     Sunday,
   }
@@ -105,7 +113,6 @@
       return "Unknown";
     }
   }
-
   // 8
 
   async function squareAsync(n: number): Promise<number> {
@@ -118,7 +125,4 @@
       }, 1000);
     });
   }
-
-
-  
 }

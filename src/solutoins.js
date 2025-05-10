@@ -12,20 +12,25 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     // 1
     function formatString(input, toUpper) {
         if (toUpper === undefined || toUpper === true) {
+            console.log(input.toUpperCase());
             return input.toUpperCase();
         }
         else {
+            console.log(input.toLowerCase());
             return input.toLowerCase();
         }
     }
     // 2
     function filterByRating(items) {
         const highRatingItems = items.filter((item) => item.rating >= 4);
+        console.log(highRatingItems);
         return highRatingItems;
     }
     // 3
     function concatenateArrays(...arrays) {
-        return [].concat(...arrays);
+        const concatenatedArray = [].concat(...arrays);
+        console.log(concatenatedArray);
+        return concatenatedArray;
     }
     // 4
     class Vehicle {
@@ -47,15 +52,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         }
     }
     const myCar = new Car("Toyota", 2020, "Corolla");
-    // myCar.getInfo();
-    // myCar.getModel();
     // 5
     function processValue(value) {
         if (typeof value === "string") {
-            return value.length;
+            const charactersOfValue = value.length;
+            console.log(charactersOfValue);
+            return charactersOfValue;
         }
         else if (typeof value === "number") {
-            return value * 2;
+            const doubleTheValue = value * 2;
+            console.log(doubleTheValue);
+            return doubleTheValue;
         }
         else {
             throw new Error("Invalid input type");
@@ -63,6 +70,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     }
     function getMostExpensiveProduct(product) {
         const mostExpensiveProduct = product.reduce((max, min) => max.price > min.price ? max : min);
+        console.log(mostExpensiveProduct);
         return mostExpensiveProduct;
     }
     // 7
